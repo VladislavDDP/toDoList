@@ -37,6 +37,7 @@ function createTask(inputText) {
     textTask.textContent = inputText
 
     const deleteBtn = document.createElement('button')
+    deleteBtn.className = 'delete-btn'
     deleteBtn.textContent = 'Delete'
 
     deleteBtn.addEventListener('click', event => {

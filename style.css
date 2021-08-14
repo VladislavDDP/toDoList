@@ -1,23 +1,63 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.to-do-container {
+  width: 50vw;
+}
+
 .task-container {
   display: flex;
   flex-direction: column;
+  width: 44vw;
   margin: 20px 0px;
-  padding: 10px;
-  width: 200px;
-  background: linear-gradient(rgba(255, 0, 0, 0.37), rgba(0, 0, 255, 0.418));
-  border: 2px solid rgb(227, 255, 171);
-  border-radius: 10px;
+  background: linear-gradient(rgb(160, 212, 56), rgba(54, 83, 65, 0.418));
+  border-radius: 1px;
   transition: transform 1.5s 0s, opacity 1s 0s;
   transform: translateX(0);
   opacity: 1;
 }
 
+.input-task {
+  border: 2px solid rgb(12, 11, 11);
+  line-height: 30px;
+  width: 40vw;
+}
+
+.input-task:focus-within {
+  border: 2px solid rgb(221, 152, 152);
+}
+
+.add-task-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background: rgb(160, 212, 56);
+  border: none;
+}
+
+.add-task-btn:hover {
+  background: rgb(187, 228, 106);
+}
+
 .products-delete {
-  transform: translateX(50vw);
+  transform: translateX(20vw);
   opacity: 0;
 }
 
+.delete-btn {
+  padding: 10px;
+  font-size: 1rem;
+  background: rgb(218, 92, 75);
+  border: none;
+}
+
 .completed {
-  text-decoration: line-through;
   background: linear-gradient(rgb(133, 175, 133), rgb(70, 151, 70));
+}
+
+.completed p {
+  text-decoration: line-through;
 }
