@@ -12,11 +12,11 @@
 .task-container {
   display: flex;
   flex-direction: column;
-  width: 44vw;
+  width: 45vw;
   margin: 20px 0px;
   background: linear-gradient(rgb(160, 212, 56), rgba(54, 83, 65, 0.418));
   border-radius: 1px;
-  transition: transform 1.5s 0s, opacity 1s 0s;
+  transition: transform 1s 0s, opacity 1s 0s;
   transform: translateX(0);
   opacity: 1;
 }

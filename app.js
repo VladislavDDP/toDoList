@@ -9,6 +9,22 @@ inputTask.addEventListener('keydown', (key) => {
     if (key.keyCode == 13) addTask()
 })
 
+toDoList.addEventListener('click', event => {
+    // add listener for delete button click
+    if (event.target.tagName == 'BUTTON') {
+        event.target.parentElement.classList.add('products-delete')
+        setTimeout(() => {
+            event.target.parentElement.remove()
+        }, 1000)
+    }
+})
+
+// listener for checkbox input if task is completed
+toDoList.addEventListener('click', event => {
+    if (event.target.type == 'checkbox')
+        event.target.parentElement.classList.toggle('completed')
+})
+
 // add task with a little validation
 function addTask() {
     if (inputTask.value == '') {
@@ -28,24 +44,12 @@ function createTask(inputText) {
     const status = document.createElement('input')
     status.type = 'checkbox'
 
-    // if ready task checkbox was used
-    status.addEventListener('click', event => {
-        event.target.parentElement.classList.toggle('completed')
-    })
-
     const textTask = document.createElement('p')
     textTask.textContent = inputText
 
     const deleteBtn = document.createElement('button')
     deleteBtn.className = 'delete-btn'
     deleteBtn.textContent = 'Delete'
-
-    deleteBtn.addEventListener('click', event => {
-        event.target.parentElement.classList.add('products-delete')
-        setTimeout(() => {
-            event.target.parentElement.remove()
-        }, 1000)
-    })
 
     taskContainer.append(status)
     taskContainer.append(textTask)
