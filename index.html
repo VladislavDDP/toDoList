@@ -19,6 +19,16 @@
             </div>
             <div class="to-do-list"></div>
         </div>
+
+        <template id="to-do-list-template">
+            <div class="task-container">
+                <input type="checkbox">
+                <p class="to-do-item-text">{{ inputText }}</p>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </template>
+
+        <script src="mustache.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

@@ -14,7 +14,7 @@
   flex-direction: column;
   width: 45vw;
   margin: 20px 0px;
-  background: linear-gradient(rgb(160, 212, 56), rgba(54, 83, 65, 0.418));
+  background: rgb(160, 212, 56);
   border-radius: 1px;
   transition: transform 1s 0s, opacity 1s 0s;
   transform: translateX(0);
@@ -47,7 +47,13 @@
   opacity: 0;
 }
 
+.to-do-item-text {
+  min-height: 3rem;
+  background: rgb(226, 226, 226);
+}
+
 .delete-btn {
+  margin: 0 auto;
   padding: 10px;
   font-size: 1rem;
   background: rgb(218, 92, 75);
@@ -55,7 +61,7 @@
 }
 
 .completed {
-  background: linear-gradient(rgb(133, 175, 133), rgb(70, 151, 70));
+  background: linear-gradient(rgb(98, 194, 98), rgb(10, 182, 10));
 }
 
 .completed p {
